@@ -15,3 +15,40 @@ hoặc val tên biến = giá trị --> val name = "dotieuthien" --> sẽ tự �
 + kotlin.Unit là ko trả về gì
 
 - Default value trong kotlin function:
+
+- Top-level function là các hàm không nằm trong bất kỳ 1 lớp (class) nào.
+Chúng được định nghĩa trong các package và được sử dụng bằng cách gọi trực tiếp
+qua tên đầy đủ hoặc tên hàm tuỳ cách import
+
+- Constructor trong kotlin: như hàm def __init__ trong python --> create an object với một số giá trị init
++ có primary constructor và secondary constructor
++ secondary constructor thì dùng constructor keyword, ex: constructor(_name: String): this{name = _name}
++ secondảy thì chỉ dùng khi cần thiết
++ ngoài ra có thể dùng init block
+
+- data class trong kotlin hold 1 tập các data, bắt buộc phải có 1 primary constructor
+--> như 1 data container, có 1 số attributes riêng
+
+- Trong 1 class có thể custom hàm getter và setter cho giá tri input đầu vào
+--> sử dụng khi muốn implement logic để check các tính chất của
+
+- Kế thừa trong kotlin
++ kotlin cho phép kế thừa khi sử dụng open class
++ Để override lên function hay 1 biến của super class thì class super phải có open,
+và class thừa kế phải có override
++ khi không có open thì 1 fun trong class sẽ có kiểu là final (giống trong dart thì final là hằng số)
++ khi override lên rồi mà muốn call func đó lại từ class cha (super) thì call bằng super.function_name
++ khi override thì nếu thay đổi giá trị của class con thì giá trị của class cha vẫn giữ nguyên,
++ Còn nếu ko override mà thay đổi giá trị luôn thì thực chất giá trị đó là của class super
+
+- object keyword trong kotlin
+--> create 1 class và tạo luôn instance cho class đó
+
+- companion object trong kotlin
++ kotlin ko có static keyword --> sử dụng companion
++ khác với python thì các tính chất này ko dùng dc ở instance
+
+- Interface thì có with abstract method và non-abstract method
++ khác với golang, khi định nghĩa 1 interface nếu object nào có implement các method của interface thì nó
+sẽ tự động hiểu là object đó thuộc về interface kia
++ còn trong kotlin thì phải thừa kế interface, và có thể override mà ko cần open
