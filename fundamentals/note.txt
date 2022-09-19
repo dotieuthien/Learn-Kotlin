@@ -1,0 +1,17 @@
+- Tất cả biến trong kotlin đều được định nghĩa là val hoặc var
++ val: value --> immutable variable
++ val - tên biến - kiểu = giá trị --> val name : String = "dotieuthien"
+hoặc val tên biến = giá trị --> val name = "dotieuthien" --> sẽ tự ép kiểu
++ var ngược lại với val định nghĩa những mutable variable --> có thể thay đổi giá trị được
+
+- Type in kotlin
++ integer - byte, short, int, long
++ floating-point type - float, double
++ char
++ boolean
+
+- Conditions:
++ Trong kotlin thì những câu có điều kiện trả về 1 result
++ kotlin.Unit là ko trả về gì
+
+- Default value trong kotlin function:
