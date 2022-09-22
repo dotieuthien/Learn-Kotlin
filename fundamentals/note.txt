@@ -3,6 +3,8 @@
 + val - tên biến - kiểu = giá trị --> val name : String = "dotieuthien"
 hoặc val tên biến = giá trị --> val name = "dotieuthien" --> sẽ tự ép kiểu
 + var ngược lại với val định nghĩa những mutable variable --> có thể thay đổi giá trị được
++ ngoài ra còn có kiểu const, nhưng const khác val là const cần init ngay tại đó
+--> val giống như final trong dart
 
 - Type in kotlin
 + integer - byte, short, int, long
@@ -14,8 +16,6 @@ hoặc val tên biến = giá trị --> val name = "dotieuthien" --> sẽ tự �
 + Trong kotlin thì những câu có điều kiện trả về 1 result
 + kotlin.Unit là ko trả về gì
 
-- Default value trong kotlin function:
-
 - Top-level function là các hàm không nằm trong bất kỳ 1 lớp (class) nào.
 Chúng được định nghĩa trong các package và được sử dụng bằng cách gọi trực tiếp
 qua tên đầy đủ hoặc tên hàm tuỳ cách import
@@ -23,7 +23,7 @@ qua tên đầy đủ hoặc tên hàm tuỳ cách import
 - Constructor trong kotlin: như hàm def __init__ trong python --> create an object với một số giá trị init
 + có primary constructor và secondary constructor
 + secondary constructor thì dùng constructor keyword, ex: constructor(_name: String): this{name = _name}
-+ secondảy thì chỉ dùng khi cần thiết
++ secondary thì chỉ dùng khi cần thiết
 + ngoài ra có thể dùng init block
 
 - data class trong kotlin hold 1 tập các data, bắt buộc phải có 1 primary constructor
@@ -45,10 +45,16 @@ và class thừa kế phải có override
 --> create 1 class và tạo luôn instance cho class đó
 
 - companion object trong kotlin
-+ kotlin ko có static keyword --> sử dụng companion
++ kotlin ko có static keyword --> sử dụng companion object
 + khác với python thì các tính chất này ko dùng dc ở instance
 
 - Interface thì có with abstract method và non-abstract method
 + khác với golang, khi định nghĩa 1 interface nếu object nào có implement các method của interface thì nó
 sẽ tự động hiểu là object đó thuộc về interface kia
 + còn trong kotlin thì phải thừa kế interface, và có thể override mà ko cần open
+
+- Visibility Modifier
++ public: default access modifier
++ private: đánh đấu function này hay biến này chỉ được access trong class
++ protected: chir có thể được gọi hàm này trong class và subclass (class thừa kế)
++ internal thì sẽ chỉ thấy trong nội bộ, những module được public sẽ ko thấy
